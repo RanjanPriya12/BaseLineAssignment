@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #43affc;
+  background-size: cover;
+}
+.wrapper {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  width: 380px;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+.wrapper header {
+  color: #43affc;
+  font-size: 21px;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 10px;
+}
+.wrapper.active header {
+  text-align: left;
+}
+header i {
+  font-size: 0;
+  cursor: pointer;
+}
+.wrapper.active header i {
+  margin-right: 12px;
+  font-size: 21px;
+}
+.wrapper.active .input {
+  display: none;
+}
+.input {
+  margin: 20px;
+  box-sizing: content-box;
+}
+.input .info-text {
+  display: none;
+  border: 1px solid;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 7px;
+}
+.input .error {
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.input .pending {
+  display: block;
+  color: #0c5460;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+.input input,
+button {
+  width: 98%;
+  height: 55px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  border-radius: 7px;
+}
+.input button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: #43affc;
+}
+.input input:is(:focus, :valid) {
+  border: 2px solid #43affc;
+}
+.input .seperator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seperator::before {
+  content: "or";
+  padding: 0 15px;
+  background: #fff;
+  color: #ccc;
+}
+.wrapper .display {
+  display: none;
+}
+.wrapper.active .display {
+  display: block;
+}
+
+.wrapper .current {
+  background: url("https://images.unsplash.com/photo-1517495306984-f84210f9daa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+.current-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.current-weather img {
+  margin-top: 20px;
+  width: 100px;
+}
+.current-weather h1 {
+  margin: 5px 0 0;
+  display: flex;
+  font-weight: 900;
+  font-size: 72px;
+}
+
+.current-weather span {
+  font-size: 40px;
+  display: block;
+  margin: 10px 15px 0 0;
+}
+.current-weather .description {
+  /* border: 1px solid; */
+  font-size: 18px;
+  margin: 0;
+}
+.current-weather .location {
+  /* border: 1px solid; */
+  font-size: 20px;
+  margin-top: 12px;
+  letter-spacing: 1.5px;
+}
+.current-weather .currenttime {
+  /* border: 1px solid; */
+  font-size: 16px;
+  margin-top: -9px;
+  letter-spacing: 1.5px;
+}
+.bottomDetails {
+  border-top: 1px solid #bfbfbf;
+  display: flex;
+  width: 100%;
+  color: black;
+}
+.bottomDetails > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 50%;
+}
+.bottomDetails > div:first-child {
+  border-right: 1px solid #bfbfbf;
+}
+.bottomDetails p:first-child {
+  margin-bottom: 0;
+}
+.bottomDetails p:last-child {
+  margin-top: -8px;
+}
+
+.fa-temperature-full {
+  color: #43affc;
+  font-size: 30px;
+  margin-top: 3px;
+}
+.fa-droplet {
+  color: #43affc;
+  font-size: 30px;
+  margin-top: 5px;
+}
+.display > section {
+  border-radius: 10px;
+  margin: 15px 10px;
+}
+
+.carousel {
+  background: url("https://images.unsplash.com/photo-1502989642968-94fbdc9eace4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+  color: white;
+  overflow: hidden;
+  font-size: small;
+  font-weight: 500;
+}
+
+.carousel .track {
+  display: inline-flex;
+  touch-action: none;
+}
+.carousel .track .card {
+  /* border: 1px solid; */
+  width: 80px;
+  text-align: center;
+}
+.card img {
+  width: 80%;
+  margin: -20px;
+}
+.foreCast {
+  padding: 10px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.dayCards {
+  display: flex;
+  padding: 0;
+  text-align: center;
+  border-bottom: 1px solid #bfbfbf;
+  justify-content: space-evenly;
+}
+.dayCards > p:first-child {
+  width: 55px;
+  text-align: left;
+}
+
+.dayCards > div {
+  height: 3px;
+  width: 60px;
+  background: tomato;
+  align-self: center;
+}
+.dayCards img {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 100%;
+}
+
+.gmap_canvas {
+  border-radius: 10px;
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 100%;
+}
+.footer_top {
+  margin: 20px;
+  color: #43affc;
+  border-top: 1px solid #bfbfbf;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 15px;
+  margin-bottom: 0;
+}
+
+.fa:hover {
+  transform: scale(0.9, 0.9);
+}
+.fa {
+  color: #43affc;
+  padding-top: 4px;
+  cursor: pointer;
+}
+.footer_bottom {
+  text-align: center;
+  border-top: 1px solid #bfbfbf;
+  margin: 0 70px;
+  font-size: small;
+  color: #bfbfbf;
+}
